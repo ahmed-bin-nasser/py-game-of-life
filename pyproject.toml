@@ -8,9 +8,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 
+[tool.poetry.scripts]
+py-game-of-life = "py_game_of_life.__main__:main"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.2"
+mypy = "^1.8.0"
 
 [build-system]
 requires = ["poetry-core"]
