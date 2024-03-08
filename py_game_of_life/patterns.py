@@ -1,9 +1,10 @@
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-try:
-    import tomllib  # type: ignore
-except ImportError:
+if sys.version_info >= (3, 11):
+    import tomllib
+else:
     import tomli as tomllib
 
 PATTERNS_FILE = Path(__file__).parent / "patterns.toml"
