@@ -22,7 +22,7 @@ class Grid:
             (1, 1),  # Below right
         )
 
-        num_neighbors = collections.defaultdict(int)  # number of alive neighbors
+        num_neighbors: dict[tuple[int, int], int] = collections.defaultdict(int)  # number of alive neighbors
 
         for row, col in self.pattern.alive_cells:
             for drow, dcol in neighbors:
